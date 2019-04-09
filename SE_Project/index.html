@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="background-color:rgb(0, 0, 0);">
+                <div style="background-color:rgb(0, 0, 0); color:whitesmoke;">
+                    <h2>Hardware Locker</h2>
+                    <p>Insert fancy banner logo here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="navbar1" id="navbar1">
+        <div class="dropdown1">
+            <button class="dropbtn1" onclick="openNav()">&#9776;</button>
+        </div>
+        <a class="active1" href="javascript:void(0)">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown1">
+            <button class="dropbtn1">Products
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown1-content">
+                <a href="#">Processors</a>
+                <a href="#">Hard Drives</a>
+                <a href="#">Motherboards</a>
+                <a href="#">Cases</a>
+                <a href="#">Graphics Cards</a>
+                <a href="#">Power Supply</a>
+            </div>
+        </div>
+        <div class="topnav1-right">
+
+            <a>Login</a>
+            <a>Cart</a>
+        </div>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div id="content">
+
+        <div id="sideNav">
+            <div class="vertical-menu">
+                <a href="#">Sorting 1</a>
+                <a href="#">Sorting 2</a>
+                <a href="#">Sorting 3</a>
+                <a href="#">Sorting 4</a>
+            </div>
+        </div>
+        <div id="mainContent">
+
+            <div id="featured">
+                <br>
+                Featured Products
+                <br>
+                <br>
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="#">
+                        <img src="img/ryzen_7_2700.jpg">
+                        <h4>Ryzen 7 2700</h4>
+                        <p>$320.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/amd_Ryzen_threadripper.jpg">
+                        <h4>AMD Ryzen Threadripper 2990WX 3.0 GHz 32 Core TR4 Boxed Processor</h4>
+                        <p>$1800.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/amd_Ryzen_threadripper.jpg">
+                        <h4> AMD Ryzen Threadripper 2920X 3.5GHz 12 Core TR4 Boxed Processor</h4>
+                        <p>$650.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/amd_ryzen_5.jpg">
+                        <h4> AMD Ryzen 5 2600 3.4GHz 6 Core AM4 Boxed Processor with Wraith Stealth Cooler</h4>
+                        <p>$190.00</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="products">
+                <li>
+                    <a href="#">
+                        <img src="img/intel_i5.jpg">
+                        <h4>Intel Core i7-8700K Coffee Lake 3.7 GHz LGA 1151 Boxed Processor</h4>
+                        <p>$400.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/intel_i9.jpg">
+                        <h4>Intel Core i9-9900K Coffee Lake 3.6 GHz LGA 1151 Boxed Processor</h4>
+                        <p>$700.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/intel_i9x.jpg">
+                        <h4> Intel Core i9-9820X Skylake 3.3 GHz LGA 2066 Boxed Processor</h4>
+                        <p>$900.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/intel_i9xe.jpg">
+                        <h4>Intel Core i9-9980XE Skylake 3.0 GHz LGA 2066 Boxed Processor</h4>
+                        <p>$1200.00</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar1");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+
+        /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+        function dropDownButton() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        } 
+    </script>
+
+
+
+
+</body>
+
+</html>
